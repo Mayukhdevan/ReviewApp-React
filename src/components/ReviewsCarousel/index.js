@@ -34,17 +34,27 @@ class ReviewsCarousel extends Component {
             className="profile-image"
           />
           <div className="nav-container">
-            <img
+            <button
+              type="button"
               onClick={this.showPrev}
-              src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
-              alt="left arrow"
-            />
+              data-testid="leftArrow"
+            >
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
+                alt="left arrow"
+              />
+            </button>
             <p className="profile-name">{reviewObj.username}</p>
-            <img
+            <button
+              type="button"
+              data-testid="rightArrow"
               onClick={this.showNext}
-              src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
-              alt="right arrow"
-            />
+            >
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
+                alt="right arrow"
+              />
+            </button>
           </div>
           <p className="company-name">{reviewObj.companyName}</p>
           <p className="review-text">{reviewObj.description}</p>
